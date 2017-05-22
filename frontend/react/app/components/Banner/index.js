@@ -10,7 +10,7 @@ function Banner(props){
                 position:"fixed",
                 top:0,
                 left:0,
-                width: w, 
+                width: "100%", 
                 height: h, 
                 backgroundImage: "url(http://res.cloudinary.com/dnefq4yix/image/upload/v1495147258/me-smaller_lgresy.jpg)",  
                 backgroundPosition: "50% 50%",

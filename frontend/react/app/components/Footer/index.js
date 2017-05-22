@@ -1,5 +1,6 @@
 import React from 'react';
 import ContentSection from '../ContentSection';
+import Social from '../Social';
 
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
@@ -41,14 +42,16 @@ constructor(props) {
   render() {
     var frontendOptions = [
         { value: 'react', label: 'React' },
-        { value: 'angular', label: 'Angular' },
-        { value: 'vue', label: 'Vue' }
+        { value: 'react', label: 'More Coming Soon!' }
+        // { value: 'angular', label: 'Angular' },
+        // { value: 'vue', label: 'Vue' }
     ];
 
     var backendOptions = [
         { value: 'node', label: 'node.js' },
-        { value: 'php', label: 'php' },
-        { value: 'ruby', label: 'ruby' }
+        { value: 'node', label: 'More Coming Soon!' }
+        // { value: 'php', label: 'php' },
+        // { value: 'ruby', label: 'ruby' }
     ];
 
     if(this.state){
@@ -77,6 +80,12 @@ constructor(props) {
     
     return (
         <ContentSection color="#323338">
+            <div className="pv4 ph3 ph5-ns tc">
+                <Social />
+            </div>
+
+
+
             <div className="w-100 tc white">Showing the {frontendSelect} + {backendSelect} version of benlorantfy.com <input className="pa2 ba b--white pointer ml2" type="button" value="Refresh" onClick={() => { this.refresh() }} /></div>
             <div className="w-100 tc white mt3">Made with &hearts; in Kitchener, Ontario</div>
         </ContentSection>

@@ -33,7 +33,7 @@ export class BlogSection extends React.Component { // eslint-disable-line react/
     };
 
     return (
-      <ContentSection title="Blog">
+      <ContentSection title="Blog" hideTriangle={true}>
         {this.props.loading && 
           <div className="w-100 tc">
             <Spinner className="dib" spinnerName="double-bounce" noFadeIn />

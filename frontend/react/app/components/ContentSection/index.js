@@ -2,16 +2,19 @@ import React from 'react';
 import Spinner from 'react-spinkit';
 
 function ContentSection(props){
+    console.log("hideTriangle", props.hideTriangle);
     return (
         <div style={{"minHeight": "100%", "width":"100%", "backgroundColor": props.color || "white", zIndex:1, position:"relative" }}>
-            <div className="w-100" style={{
-                transform:"rotate(-3deg) translateY(-70px) scale(1)",
-                backgroundColor: props.color || "white" ,
-                height:"200px",
-                zIndex:0,
-                position:"relative",
-            }}></div>
-            <div className="pa3 w-100 pb6" style={{ marginTop:"-250px", zIndex:1, position:"relative" }}>
+            {!props.hideTriangle &&
+                <div className="w-100" style={{
+                    transform:"rotate(-3deg) translateY(-70px) scale(1)",
+                    backgroundColor: props.color || "white" ,
+                    height:"200px",
+                    zIndex:0,
+                    position:"relative",
+                }}></div>
+            }
+            <div className="pa3 w-100 pb6" style={{ marginTop:props.hideTriangle ? "0" : "-250px", zIndex:1, position:"relative" }}>
                 {props.title && 
                     <div>
                         <div className="fl w-100 tc">
