@@ -1,0 +1,22 @@
+[
+    {
+        "title":"GamePod.io",
+        "message":"GamePod.io is a web-based modern game builder that producing web games using native web technologies.",
+        "image": "https://res.cloudinary.com/dnefq4yix/image/upload/v1495390304/Screen_Shot_2017-05-21_at_2.10.51_PM_algn7n.png"
+    },
+    {
+        "title":"FlameTask",
+        "message":"Flametask is a preventative maintence mobile app for helping inspectors keep track of their inspections.",
+        "image":"https://res.cloudinary.com/dnefq4yix/image/upload/v1495390772/Screen_Shot_2017-05-21_at_2.18.51_PM_lureto.png"
+    },
+    {
+        "title":"Terry Armstrong - Artist",
+        "message":"Terry Armstrong - Artist is a website I developed to help a local artist sell his paintings",
+        "image":"https://res.cloudinary.com/dnefq4yix/image/upload/v1495392023/Screen_Shot_2017-05-21_at_2.39.34_PM_mt9ytc.png"
+    },
+    {
+        "title":"TripHunt",
+        "message":"TripHunt is a mobile app that gamifies traveling by awarding users points for visiting different landmarks",
+        "image":"https://res.cloudinary.com/dnefq4yix/image/upload/v1495394597/Screen_Shot_2017-05-21_at_3.22.11_PM_kuothx.png"
+    }
+]

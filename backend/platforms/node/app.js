@@ -2,13 +2,36 @@ var express = require('express')
 var app = express()
 var FeedParser = require('feedparser');
 var request = require('request'); // for fetching the feed 
-var config = require('../config.json');
+var config = require('../../config.json');
 var router = express.Router();
+var copy = {
+     projects: require("../../copy/projects.json")
+    ,experience: require("../../copy/experience.json")
+    ,education: require("../../copy/education.json")
+    ,awards: require("../../copy/awards.json")
+}
+
 app.use('/api/nodejs/v1', router);
 
 router.get('/', function (req, res) {
   res.send('Hello World from the node API!')
 })
+
+router.get('/experience', function (req, res) {
+    res.json(copy.experience);
+});
+
+router.get('/education', function (req, res) {
+    res.json(copy.education);
+});
+
+router.get('/awards', function (req, res) {
+    res.json(copy.awards);
+});
+
+router.get('/projects', function (req, res) {
+    res.json(copy.projects);
+});
 
 router.get('/articles', function (req, res) {
     var feedrequest = request(config.blog.url);
@@ -18,7 +41,7 @@ router.get('/articles', function (req, res) {
     feedrequest.on('error', function (error) {
         console.log("request error");
         console.log(error);
-        if(!sent) res.end(500);
+        if(!sent) { res.status(500); res.end("error") }
         sent = true;
     });
     
@@ -36,7 +59,7 @@ router.get('/articles', function (req, res) {
     feedparser.on('error', function (error) {
         console.log("parse error");
         console.log(error);
-        if(!sent) res.end(500);
+        if(!sent) { res.status(500); res.end("error") }
         sent = true;
     });
     
@@ -59,6 +82,8 @@ router.get('/articles', function (req, res) {
         sent = true;
     });
 });
+
+
 
 app.listen(4000, function () {
   console.log('Example app listening on port 4000!')

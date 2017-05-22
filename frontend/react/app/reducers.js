@@ -10,6 +10,11 @@ import { LOCATION_CHANGE } from 'react-router-redux';
 import languageProviderReducer from 'containers/LanguageProvider/reducer';
 import globalReducer from 'containers/App/reducer';
 import blogSectionReducer from 'containers/BlogSection/reducer';
+import projectsSectionReducer from 'containers/ProjectsSection/reducer';
+import experienceSectionReducer from 'containers/ExperienceSection/reducer';
+import educationSectionReducer from 'containers/EducationSection/reducer';
+import awardsSectionReducer from 'containers/AwardsSection/reducer';
+
 
 /*
  * routeReducer
@@ -48,6 +53,10 @@ export default function createReducer(asyncReducers) {
     language: languageProviderReducer,
     global: globalReducer,
     blogSection: blogSectionReducer,
+    projectsSection: projectsSectionReducer,
+    experienceSection: experienceSectionReducer,
+    educationSection: educationSectionReducer,
+    awardsSection: awardsSectionReducer,
     ...asyncReducers,
   });
 }

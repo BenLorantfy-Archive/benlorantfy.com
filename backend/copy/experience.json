@@ -1,0 +1,30 @@
+[
+    {
+        "company": "Postmedia",
+        "title": "Front End Developer",
+        "description": "I'm currently at postmedia working as a front end developer using React+Redux.",
+        "logo": "https://res.cloudinary.com/dnefq4yix/image/upload/v1495383343/pmn-logo-new_jxejhq.jpg",
+        "descriptionImage": ""
+    },
+    {
+        "company": "Limbik",
+        "title": "Full Stack Developer",
+        "description": "I worked at Limbik Inc. during my second term of my last year as a student at Conestoga College helping develop their video analytics product. My specific contributions include the analytics dashboard front-end that I created working off a mockup as well as developing a multi-process, distributed backend worker for performing analytics.",
+        "logo": "https://res.cloudinary.com/dnefq4yix/image/upload/v1495383271/Logo-blueretina_pswoer.png",
+        "descriptionImage": ""
+    },
+    {
+        "company": "Rivison",
+        "title": "App Developer",
+        "description": "Rivison Inc is an application development company whose main product is FlameTask, a mobile app that tracks equipment inspections and maintenance. Their new version of the application that I worked on is an Apache Cordova based project which allows apps to be developed in a web stack environment and then provides commands to easily build to iOS, Android, and Windows phones. The app allows users to scan equipment barcodes and check when inspections are due or perform them and reset the inspection dates.",
+        "logo": "https://res.cloudinary.com/dnefq4yix/image/upload/v1495384628/Artboard_1_mz1suu.png",
+        "descriptionImage": ""
+    },
+    {
+        "company": "Brose",
+        "title": "Web Developer",
+        "description": "Brose Canada Inc is a car seat/parts manufacturerwhere I spent 12 months of my Co-Op creating several web applications that optimized their production processes. I started out in an IT support role but my supervisor quickly realized my skill level in development and had me working on applications my entire duration at Brose. One major project I had was developing a .NET quality assurance tracking system. This was replacing an old PHP system and some excel spreadsheets. The system allowed service techs to input parts that needed to be tested from their terminals at the machines on the floor. This involved submitting a few fields of information including scanning a label barcode and setting the test priority. The quality techs in the quality lab would receive this request and all the information associated with it. From there they could click to start and end the tests. This allowed management to track the status of QA by looking at graphical realtime reports. It was predicted my system saved them a headcount per year, which after 10 years adds up to efficiency savings of 1 million. I received a Co-Op Student Of The Year award from Conestoga College for this project.",
+        "logo": "https://res.cloudinary.com/dnefq4yix/image/upload/v1495383171/Brose.svg_kgtpmf.png",
+        "descriptionImage": ""
+    }
+]

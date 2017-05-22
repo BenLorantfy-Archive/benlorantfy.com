@@ -1,0 +1,97 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "react-3d-carousel",
+        "scope": null,
+        "escapedName": "react-3d-carousel",
+        "name": "react-3d-carousel",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/benlorantfy/Projects/benlorantfy.com/frontend/react"
+    ]
+  ],
+  "_from": "react-3d-carousel@latest",
+  "_id": "react-3d-carousel@0.0.6",
+  "_inCache": true,
+  "_location": "/react-3d-carousel",
+  "_nodeVersion": "2.1.0",
+  "_npmUser": {
+    "name": "bobiblazeski",
+    "email": "slobodan.blazeski@gmail.com"
+  },
+  "_npmVersion": "2.10.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-3d-carousel",
+    "scope": null,
+    "escapedName": "react-3d-carousel",
+    "name": "react-3d-carousel",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-3d-carousel/-/react-3d-carousel-0.0.6.tgz",
+  "_shasum": "a24db99e5e729d302bf660aa1f9c08bd9e83fe99",
+  "_shrinkwrap": null,
+  "_spec": "react-3d-carousel",
+  "_where": "/Users/benlorantfy/Projects/benlorantfy.com/frontend/react",
+  "author": {
+    "name": "Slobodan Blazeski",
+    "email": "slobodan.blazeski@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/bobiblazeski/react-3d-carousel/issues"
+  },
+  "dependencies": {
+    "ease-functions": "0.0.1"
+  },
+  "description": "A 3D carousel written in react",
+  "devDependencies": {
+    "babel": "^5.3.1",
+    "babel-core": "^5.3.1",
+    "chai": "^2.3.0",
+    "mocha": "^2.2.4"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "a24db99e5e729d302bf660aa1f9c08bd9e83fe99",
+    "tarball": "https://registry.npmjs.org/react-3d-carousel/-/react-3d-carousel-0.0.6.tgz"
+  },
+  "gitHead": "ce47c14617efd17219d2668cb1a269fffdb3aa25",
+  "homepage": "https://github.com/bobiblazeski/react-3d-carousel#readme",
+  "keywords": [
+    "carousel",
+    "react",
+    "react-component"
+  ],
+  "license": "MIT",
+  "main": "js/Carousel.js",
+  "maintainers": [
+    {
+      "name": "bobiblazeski",
+      "email": "slobodan.blazeski@gmail.com"
+    }
+  ],
+  "name": "react-3d-carousel",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "react": ">=0.13.x < 1.0.0"
+  },
+  "prepublish": "babel ./src --out-dir ./js",
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bobiblazeski/react-3d-carousel.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "version": "0.0.6"
+}

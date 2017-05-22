@@ -14,8 +14,16 @@ import { Parallax, Background } from 'react-parallax';
 import * as styles from './styles';
 
 import ContentSection from '../../components/ContentSection';
-import BlogArticle from '../../components/BlogArticle';
+import BlogArticle from '../../components/BlogArticle'; 
+import ExperienceItem from '../../components/ExperienceItem';
+import Banner from '../../components/Banner';
+import Footer from '../../components/Footer';
+
 import BlogSection from '../BlogSection';
+import ProjectsSection from '../ProjectsSection';
+import ExperienceSection from '../ExperienceSection';
+import EducationSection from '../EducationSection';
+import AwardsSection from '../AwardsSection';
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -24,15 +32,8 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
 
     return (
       <div>
-        <Parallax strength={600}>
-          <Background>
-            <div style={{ 
-              width: w, 
-              height: h, 
-              backgroundImage: "url(http://res.cloudinary.com/dnefq4yix/image/upload/v1495147258/me-smaller_lgresy.jpg)",  
-              backgroundPosition: "50% 50%"
-            }}></div>
-          </Background>
+        <Banner>
+
           <div style={{"height": h, position:"relative" }}>
             <div style={{ backgroundColor:"rgba(0,0,0,0.5)", width:"100%", height:"100%", position:"relative" }}>
 
@@ -42,12 +43,16 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
               </div>
             </div>
           </div>
-        </Parallax>
-        <BlogSection />
 
-        <ContentSection title="Projects"></ContentSection>   
-        <ContentSection title="Experience"></ContentSection>   
-        <ContentSection title="Hire Me"></ContentSection>   
+        </Banner>
+
+        <BlogSection />
+        <ProjectsSection />
+        <ExperienceSection />
+        <EducationSection />
+        <AwardsSection />
+
+        <Footer />
       </div>
     );
   }

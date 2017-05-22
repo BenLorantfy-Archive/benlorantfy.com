@@ -13,15 +13,25 @@ import * as selectors from './selectors';
 import * as actions from './actions';
 import ContentSection from '../../components/ContentSection';
 import BlogArticle from '../../components/BlogArticle';
+import * as Carousel from '../../components/Carousel';
+
+// @import "~slick-carousel/slick/slick.css";
+// @import "~slick-carousel/slick/slick-theme.css";
 
 export class BlogSection extends React.Component { // eslint-disable-line react/prefer-stateless-function
   componentWillMount(){
-    console.log("DISPATCHING loadArticles");
     this.props.dispatch(actions.loadArticles());
   }
 
   render() {
-    console.log(this.props.articles);
+    var settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
+
     return (
       <ContentSection title="Blog">
         {this.props.loading && 
