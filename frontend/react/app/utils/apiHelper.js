@@ -14,7 +14,7 @@ export function getApiRoute(path) {
     port = API_PORT;
   }
 
-  return `http://localhost/api/nodejs/v1${path}`;
+  return `/api/nodejs/v1${path}`;
 
 //   return `${host}:${port}/${path}`;
 }
