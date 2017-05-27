@@ -26,12 +26,17 @@ import ExperienceSection from '../ExperienceSection';
 import EducationSection from '../EducationSection';
 import AwardsSection from '../AwardsSection';
 
+import Line from 'react-chartjs-2';
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     var w = window.innerWidth;
     var h = window.innerHeight;
 
+    var chartOptions = {}; //JSON.parse('{"maintainAspectRatio":false,"layout":{"padding":{"left":8,"right":0,"top":0,"bottom":4}},"legend":{"display":false},"elements":{"line":{"borderWidth":1}},"scales":{"yAxes":[{"display":true,"position":"left","ticks":{"beginAtZero":true,"padding":8,"maxTicksLimit":5,"maxRotation":0},"gridLines":{"borderDash":[1,3],"lineWidth":1,"drawBorder":false,"color":"rgba(0, 0, 0, 0.2)"}}],"xAxes":[{"display":true,"stacked":false,"ticks":{"maxTicksLimit":8,"maxRotation":0},"gridLines":{"display":false,"drawBorder":false}}]},"options":{"responsive":true,"maintainAspectRatio":true},"tooltips":{"titleMarginBottom":5,"displayColors":false,"xPadding":10,"yPadding":10,"bodySpacing":6}}');
+    var chartData = JSON.parse('{"labels":["May 1st","May 2nd","May 3rd"],"datasets":[{"fill":false,"lineTension":0,"backgroundColor":"rgba(108, 172, 222, 0.3)","borderColor":"rgba(108,172,222,1)","borderWidth":2,"pointBorderColor":"rgba(108,172,222,1)","pointBackgroundColor":"rgba(108,172,222,1)","pointBorderWidth":0,"pointHoverRadius":4,"pointHoverBorderWidth":0,"pointRadius":2,"pointHitRadius":10,"data":[20,40,30]},{"fill":false,"lineTension":0,"backgroundColor":"rgba(108, 172, 222, 0.3)","borderColor":"rgba(244,208,62,1)","borderWidth":2,"pointBorderColor":"rgba(244,208,62,1)","pointBackgroundColor":"rgba(244,208,62,1)","pointBorderWidth":0,"pointHoverRadius":4,"pointHoverBorderWidth":0,"pointRadius":2,"pointHitRadius":10,"data":[15,32,50]},{"fill":false,"lineTension":0,"backgroundColor":"rgba(108, 172, 222, 0.3)","borderColor":"rgba(37,184,154,1)","borderWidth":2,"pointBorderColor":"rgba(37,184,154,1)","pointBackgroundColor":"rgba(37,184,154,1)","pointBorderWidth":0,"pointHoverRadius":4,"pointHoverBorderWidth":0,"pointRadius":2,"pointHitRadius":10,"data":[10,20,15]},{"fill":false,"lineTension":0,"backgroundColor":"rgba(108, 172, 222, 0.3)","borderColor":"rgba(228,47,40,1)","borderWidth":2,"pointBorderColor":"rgba(228,47,40,1)","pointBackgroundColor":"rgba(228,47,40,1)","pointBorderWidth":0,"pointHoverRadius":4,"pointHoverBorderWidth":0,"pointRadius":2,"pointHitRadius":10,"data":[5,10,8]}]}');
+    
+    console.log(chartData, chartOptions);
     return (
       <div>
         <Banner>
@@ -65,6 +70,12 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
         <ExperienceSection />
         <EducationSection />
         <AwardsSection />
+
+        <div style={{ "height": 1000, "width": "100%", "backgroundColor":"white", zIndex:99, "position":"relative" }}>
+          <Line data={chartData} options={chartOptions} width={600} height={250}/>
+        </div>
+
+
 
         <Footer />
       </div>

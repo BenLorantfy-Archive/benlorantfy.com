@@ -58,25 +58,46 @@ echo "[deploy.sh] ${GREEN}Deleted${NC} old files"
 
 # COPY NEW FILES
 echo "[deploy.sh] Transfering new files..."
-rsync -av --exclude 'node_modules' --exclude '.git' --exclude '.github' . root@${IP}:/root/benlorantfy.com
+rsync -av --exclude 'vendor' --exclude 'node_modules' --exclude '.git' --exclude '.github' . root@${IP}:/root/benlorantfy.com
 echo "[deploy.sh] ${GREEN}Transfered${NC} new files"
+
+# START GO API
+# ============
+echo "[deploy.sh] Stopping all the forever scripts..."
+ssh root@${IP} 'forever stop 0' 
+echo "[deploy.sh] ${GREEN}Stopped${NC} forever script #0 (GO)"
+ssh root@${IP} 'forever stop 1'
+echo "[deploy.sh] ${GREEN}Stopped${NC} forever script #1 (node)"
+
+# START GO API
+# ============
+    # Install Dependencies
+    echo "[deploy.sh] Installing go dependencies..."
+    ssh root@${IP} 'cd "/root/benlorantfy.com/backend/platforms/go/src/benlorantfy.com" && glide install --production'
+    echo "[deploy.sh] ${GREEN}Installed${NC} go dependencies"
+
+    # Compile program
+    echo "[deploy.sh] Compiling GO program"
+    # go build -o ./backend/platforms/go/bin/app ./backend/platforms/go/src/benlorantfy.com/app
+    ssh root@${IP} 'cd "/root/benlorantfy.com/backend/platforms/go/src/benlorantfy.com" && go build -o /root/benlorantfy.com/backend/platforms/go/bin/app ./app'
+    echo "[deploy.sh] ${GREEN}Compiled${NC} go program"
+
+    # Start using forever
+    echo "[deploy.sh] Starting go app in production mode using forever..."
+    ssh root@${IP} 'cd "/root/benlorantfy.com/backend/platforms/go/bin" && forever start app'
+    echo "[deploy.sh] ${GREEN}Started${NC} go app in production mode using forever"
 
 # START NODE API
 # ==============
-    # Stop existing forever process
-    # http://stackoverflow.com/a/14559214
-    echo "[deploy.sh] Stopping existing forever process..."
-    ssh root@${IP} 'forever stop 0'
-    echo "[deploy.sh] ${GREEN}Stopped${NC} existing forever process"
 
     # Install Dependencies
-    echo "[deploy.sh] Installing dependencies..."
+    echo "[deploy.sh] Installing node dependencies..."
     ssh root@${IP} 'cd "/root/benlorantfy.com/backend/platforms/node" && npm install --production'
     echo "[deploy.sh] ${GREEN}Installed${NC} dependencies"
 
-    echo "[deploy.sh] Pruning dependencies..."
+    echo "[deploy.sh] Pruning node dependencies..."
     ssh root@${IP} 'cd "/root/benlorantfy.com/backend/platforms/node" && npm prune --production'
-    echo "[deploy.sh] ${GREEN}Pruned${NC} dependencies"
+    echo "[deploy.sh] ${GREEN}Pruned${NC} node dependencies"
 
     # Start app in production mode
     # http://stackoverflow.com/a/7675370

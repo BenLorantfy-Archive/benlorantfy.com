@@ -21,5 +21,5 @@ func CreateApi() *restful.WebService {
 }
 
 func GetEducation(request *restful.Request, response *restful.Response) {
-    response.WriteEntity("wowzers")
+    response.WriteEntity("cheese")
 }

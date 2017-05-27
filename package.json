@@ -1,0 +1,22 @@
+{
+  "name": "benlorantfy.com",
+  "version": "1.0.0",
+  "description": "Source code for benlorantfy.com",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenLorantfy/benlorantfy.com.git"
+  },
+  "author": "Ben Lorantfy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BenLorantfy/benlorantfy.com/issues"
+  },
+  "homepage": "https://github.com/BenLorantfy/benlorantfy.com#readme",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "gulp": "^3.9.1"
+  }
+}
