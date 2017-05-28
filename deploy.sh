@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# =================
+# Required Programs
+# =================
+# nodejs
+# npm
+# go
+# glide
+# forever
+# =================
+
 # Constants
 IP=138.197.107.96
 RED='\033[0;31m'
@@ -58,7 +68,7 @@ echo "[deploy.sh] ${GREEN}Deleted${NC} old files"
 
 # COPY NEW FILES
 echo "[deploy.sh] Transfering new files..."
-rsync -av --exclude 'vendor' --exclude 'node_modules' --exclude '.git' --exclude '.github' . root@${IP}:/root/benlorantfy.com
+rsync -av --exclude 'go/src/vendor' --exclude 'node_modules' --exclude '.git' --exclude '.github' . root@${IP}:/root/benlorantfy.com
 echo "[deploy.sh] ${GREEN}Transfered${NC} new files"
 
 # START GO API
@@ -72,20 +82,20 @@ echo "[deploy.sh] ${GREEN}Stopped${NC} forever script #1 (node)"
 # START GO API
 # ============
     # Install Dependencies
-    echo "[deploy.sh] Installing go dependencies..."
-    ssh root@${IP} 'cd "/root/benlorantfy.com/backend/platforms/go/src/benlorantfy.com" && glide install --production'
-    echo "[deploy.sh] ${GREEN}Installed${NC} go dependencies"
+    # echo "[deploy.sh] Installing go dependencies..."
+    # ssh root@${IP} 'cd "/root/benlorantfy.com/backend/platforms/go/src/benlorantfy.com" && glide install --production'
+    # echo "[deploy.sh] ${GREEN}Installed${NC} go dependencies"
 
     # Compile program
-    echo "[deploy.sh] Compiling GO program"
-    # go build -o ./backend/platforms/go/bin/app ./backend/platforms/go/src/benlorantfy.com/app
-    ssh root@${IP} 'cd "/root/benlorantfy.com/backend/platforms/go/src/benlorantfy.com" && go build -o /root/benlorantfy.com/backend/platforms/go/bin/app ./app'
-    echo "[deploy.sh] ${GREEN}Compiled${NC} go program"
+    # echo "[deploy.sh] Compiling GO program"
+    # # go build -o ./backend/platforms/go/bin/app ./backend/platforms/go/src/benlorantfy.com/app
+    # ssh root@${IP} 'cd "/root/benlorantfy.com/backend/platforms/go/src/benlorantfy.com" && go build -o /root/benlorantfy.com/backend/platforms/go/bin/app ./app'
+    # echo "[deploy.sh] ${GREEN}Compiled${NC} go program"
 
     # Start using forever
-    echo "[deploy.sh] Starting go app in production mode using forever..."
-    ssh root@${IP} 'cd "/root/benlorantfy.com/backend/platforms/go/bin" && forever start app'
-    echo "[deploy.sh] ${GREEN}Started${NC} go app in production mode using forever"
+    # echo "[deploy.sh] Starting go app in production mode using forever..."
+    # ssh root@${IP} 'cd "/root/benlorantfy.com/backend/platforms/go/bin" && forever start app'
+    # echo "[deploy.sh] ${GREEN}Started${NC} go app in production mode using forever"
 
 # START NODE API
 # ==============

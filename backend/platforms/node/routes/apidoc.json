@@ -1,0 +1,16 @@
+{
+  "name": "benlorantfy.com",
+  "version": "0.1.0",
+  "description": "The API documentation for benlorantfy.com",
+  "title": "benlorantfy.com API",
+  "url" : "https://benlorantfy.com/<platform>/v1",
+  "sampleUrl": "https://benlorantfy.com/<platform>/v1",
+  "header": {
+    "title": "Platforms",
+    "filename": "apidocs/header.md"
+  },
+  "template": {
+  	"withCompare": true,
+  	"withGenerator": true
+  }
+}

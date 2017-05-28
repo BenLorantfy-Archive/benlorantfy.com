@@ -26,8 +26,6 @@ import ExperienceSection from '../ExperienceSection';
 import EducationSection from '../EducationSection';
 import AwardsSection from '../AwardsSection';
 
-import Line from 'react-chartjs-2';
-
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     var w = window.innerWidth;
@@ -70,13 +68,6 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
         <ExperienceSection />
         <EducationSection />
         <AwardsSection />
-
-        <div style={{ "height": 1000, "width": "100%", "backgroundColor":"white", zIndex:99, "position":"relative" }}>
-          <Line data={chartData} options={chartOptions} width={600} height={250}/>
-        </div>
-
-
-
         <Footer />
       </div>
     );
