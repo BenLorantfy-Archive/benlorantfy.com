@@ -26,7 +26,7 @@ gulp.task('build:go', function() {
 gulp.task('start:go', function() {
   log("Starting Go App");
   return new Promise(function(resolve, reject){
-    var cmd = './backend/platforms/go/bin/app';
+    var cmd = 'cd ./backend/platforms/go/bin && ./app';
     exec(cmd, function(error, stdout, stderr) {
       console.log(stdout);
       

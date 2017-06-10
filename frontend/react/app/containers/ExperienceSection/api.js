@@ -10,7 +10,7 @@ export function loadExperience() {
         if (err) {
           reject(err);
         } else if (res.statusCode === 204) {
-          resolve([]);
+          resolve({});
         } else {
           resolve(res.body);
         }

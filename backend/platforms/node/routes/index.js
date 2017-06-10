@@ -195,7 +195,11 @@ router.get('/articles', function (req, res) {
             });
         }
 
-        if(!sent) res.json(posts);
+        var items = {
+            items: posts
+        }
+
+        if(!sent) res.json(items);
         sent = true;
     });
 });

@@ -8,7 +8,7 @@ export function* loadArticles(action) {
   console.log("LOAD DEE ARTICLES");
   try{
     var articles = yield call(api.loadArticles);
-    yield put(actions.loadArticlesSucceeded(articles));
+    yield put(actions.loadArticlesSucceeded(articles.items));
   }catch(e){
     yield put(actions.loadArticlesFailed());
   } 

@@ -7,7 +7,7 @@ import * as api from './api';
 export function* loadExperience(action) {
   try{
     var experience = yield call(api.loadExperience);
-    yield put(actions.loadExperienceSucceeded(experience));
+    yield put(actions.loadExperienceSucceeded(experience.items));
   }catch(e){
     yield put(actions.loadExperienceFailed());
   } 

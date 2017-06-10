@@ -2,3 +2,11 @@ package: .
 import:
 - package: github.com/emicklei/go-restful
   version: ^2.2.0
+- package: github.com/spf13/afero
+- package: golang.org/x/text
+  subpackages:
+  - transform
+- package: github.com/mmcdole/gofeed
+  version: ^1.0.0-beta
+  subpackages:
+  - rss

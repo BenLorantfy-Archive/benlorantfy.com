@@ -1,9 +1,11 @@
-[
-    {
-        "school": "Conestoga College",
-        "program": "Software Engineering Technology",
-        "description": "The software engineering technology program at Conestoga College is widely recognized as one of the top programs of its kind in the province. It covers a broad range of topic areas, ranging from Assembly coding to Web Development. It's a 3 year program resulting in an advanced diploma. I enrolled in the Co-Op version of SET, which gave me 16 months of valuable work experience before I graduated.",
-        "logo": "https://res.cloudinary.com/dnefq4yix/image/upload/v1495385325/dc1b5860-19d5-406c-86f2-0a307bf0b78b_bninxu.png",
-        "descriptionImage": ""
-    }
-]
+{
+    "items": [
+        {
+            "school": "Conestoga College",
+            "program": "Software Engineering Technology",
+            "description": "The software engineering technology program at Conestoga College is widely recognized as one of the top programs of its kind in the province. It covers a broad range of topic areas, ranging from Assembly coding to Web Development. It's a 3 year program resulting in an advanced diploma. I enrolled in the Co-Op version of SET, which gave me 16 months of valuable work experience before I graduated.",
+            "logo": "https://res.cloudinary.com/dnefq4yix/image/upload/v1495385325/dc1b5860-19d5-406c-86f2-0a307bf0b78b_bninxu.png",
+            "descriptionImage": ""
+        }
+    ]
+}

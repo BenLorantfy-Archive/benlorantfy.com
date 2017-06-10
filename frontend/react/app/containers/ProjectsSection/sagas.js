@@ -8,7 +8,7 @@ export function* loadProjects(action) {
   console.log("LOAD DEE PROJECTS");
   try{
     var projects = yield call(api.loadProjects);
-    yield put(actions.loadProjectsSucceeded(projects));
+    yield put(actions.loadProjectsSucceeded(projects.items));
   }catch(e){
     yield put(actions.loadProjectsFailed());
   } 

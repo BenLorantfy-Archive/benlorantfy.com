@@ -1,6 +1,47 @@
-hash: 9cadec8b504eb5c26536721892592a831b26ade84726c1554066a10f2e94a1ce
-updated: 2017-05-26T23:39:15.642895212-04:00
+hash: 9b3683b7bed1bc247545e9110231896996e30a1946732897af1335cde2a88cf2
+updated: 2017-06-03T00:49:57.460349475-04:00
 imports:
+- name: github.com/andybalholm/cascadia
+  version: 349dd0209470eabd9514242c688c403c0926d266
 - name: github.com/emicklei/go-restful
   version: cf834cf8da5b681af81bde6fa32304e6ce8eec71
+  subpackages:
+  - log
+- name: github.com/mmcdole/gofeed
+  version: 303223474e837398b2f8a265e5572958bb5568c0
+  subpackages:
+  - atom
+  - extensions
+  - internal/shared
+  - rss
+- name: github.com/mmcdole/goxpp
+  version: e38884aa48c1952a416ba35f3c276e4f02f9b40e
+- name: github.com/PuerkitoBio/goquery
+  version: 2dc93891ab3bcc1dbc2cbf9bc6376c37f6e6f289
+- name: github.com/spf13/afero
+  version: 9be650865eab0c12963d8753212f4f9c66cdcf12
+- name: golang.org/x/net
+  version: e4fa1c5465ad6111f206fc92186b8c83d64adbe1
+  subpackages:
+  - html
+  - html/atom
+  - html/charset
+- name: golang.org/x/text
+  version: ccbd3f7822129ff389f8ca4858a9b9d4d910531c
+  subpackages:
+  - encoding
+  - encoding/charmap
+  - encoding/htmlindex
+  - encoding/internal
+  - encoding/internal/identifier
+  - encoding/japanese
+  - encoding/korean
+  - encoding/simplifiedchinese
+  - encoding/traditionalchinese
+  - encoding/unicode
+  - internal/tag
+  - internal/utf8internal
+  - language
+  - runes
+  - transform
 testImports: []

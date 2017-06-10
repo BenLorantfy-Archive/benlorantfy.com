@@ -7,7 +7,7 @@ import * as api from './api';
 export function* loadAwards(action) {
   try{
     var awards = yield call(api.loadAwards);
-    yield put(actions.loadAwardsSucceeded(awards));
+    yield put(actions.loadAwardsSucceeded(awards.items));
   }catch(e){
     yield put(actions.loadAwardsFailed());
   } 

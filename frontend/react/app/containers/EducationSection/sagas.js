@@ -7,7 +7,7 @@ import * as api from './api';
 export function* loadEducation(action) {
   try{
     var education = yield call(api.loadEducation);
-    yield put(actions.loadEducationSucceeded(education));
+    yield put(actions.loadEducationSucceeded(education.items));
   }catch(e){
     yield put(actions.loadEducationFailed());
   } 

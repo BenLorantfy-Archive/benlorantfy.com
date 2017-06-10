@@ -1,0 +1,22 @@
+// This is the configuration file for forever, an npm module that is used to start and monitor
+//  all the different apps. Each object is the configuration for an app.
+
+[
+  {
+    // Node App
+    "uid": "Node_Application",
+    "append": true,
+    "watch": true,
+    "script": "app.js",
+    "sourceDir": "/root/benlorantfy.com/backend/platforms/node"
+  },
+  {
+    // GO App
+    "uid": "GO_Application",
+    "append": true,
+    "watch": true,
+    "script": "run.sh", // run.sh is a wrapper for ./app, since forever can't handle compiled binaries
+    "sourceDir": "/root/benlorantfy.com/backend/platforms/go/bin",
+    "command": "/bin/bash"
+  }
+]

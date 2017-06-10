@@ -14,6 +14,8 @@ export function getApiRoute(path) {
     port = API_PORT;
   }
 
+  var hash = window.location.hash;
+  var backend = hash.split("+")[1];
   return `/api/nodejs/v1${path}`;
 
 //   return `${host}:${port}/${path}`;
